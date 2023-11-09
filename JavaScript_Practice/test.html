@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 800px;
+        height: 200px;
+        margin: 10px auto;
+      }
+      textarea {
+        height: 200px;
+        width: 600px;
+        padding: 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>This is a first webpage on vs code 2.</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia iure nihil
+      minus, eius incidunt numquam voluptatem. Rem consequatur, sunt beatae
+      iusto voluptate praesentium accusamus quas ullam porro, harum perferendis
+      aliquam sint alias consectetur labore. Unde illo minima aspernatur
+      laboriosam quis?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus excepturi
+      nam voluptatem est ut fuga.
+    </p>
+    <button class="btn" id="btn">Button</button>
+    <div class="container">
+      <h5>Enter text here:</h5>
+      <textarea name="text" id="text-area" cols="30" rows="10">
+      hello world
+    </textarea
+      >
+    </div>
+    <script>
+      let a = console.log("Hello World");
+      let btn = document.getElementById("btn");
+      console.log(btn);
+      btn.addEventListener("click", (element) => {
+        console.log(element.target);
+      });
+      let textArea = document.getElementById("text-area");
+      console.log(textArea);
+      textArea.addEventListener("click", (element) => {
+        console.log(element.target);
+        let newValue = element.target.value.toUpperCase();
+        textArea.innerHTML = newValue;
+        console.log(element.target.value.toUpperCase());
+      });
+    </script>
+  </body>
+</html>

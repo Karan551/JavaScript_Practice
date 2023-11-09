@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling via JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container my-2">
+        <h1 class="h1 text-bg-dark text-center">This is a Exception Handling Practice Webpage.</h1>
+        <dl class="my-3">
+            <dt class="fs-3 text-primary text-decoration-underline">
+                Error Handling:-
+            </dt>
+            <dd class="fs-4">
+                <p>No matter how great we are at programming, sometimes our scripts have errors. They may occur because
+                    of our mistakes, an unexpected user input, an erroneous server response, and for a thousand other
+                    reasons.</p>
+                <p class="fs-4">For more information About <span class="text-bg-secondary mx-2">try catch </span><a
+                        href="https://javascript.info/try-catch" target="_blank">click here</a></p>
+                <p class="bg-primary-subtle">When we apply try catch we will follow the following rules to apply try and
+                    catch:-</p>
+                <ol class="text-capitalize">
+                    <li>
+                        the code must be runnable. In other words, it should be valid JavaScript.It won't work if the
+                        code is syntactically wrong.
+                    </li>
+                    <li>If an exception happens in <span class="bg-dark-subtle text-danger text-lowercase">“scheduled”
+                            code, like in setTimeout,</span> then try...catch won't catch it.</li>
+                </ol>
+            </dd>
+            <dt class="fs-3 text-primary text-decoration-underline">Throw own errors:-</dt>
+            <dd class="fs-4">The "throw" operator generates an error.We can generate own error with the help of throw
+                operator and Error object.
+                <p>Syntax:-</p>
+                <p>
+                <code>
+                let error = throw new Error('message') 
+                </code>
+                <br>
+                <code>
+                    //or
+                    <br>
+                    let err = throw new SyntaxError('message')
+                    <br>
+                    let err = throw new ReferenceError('message')
+                </code>
+           
+
+
+                </p>
+            </dd>
+        </dl>
+    </div>
+    <script src="./try_catch.js">
+    </script>
+    <!-- To load bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

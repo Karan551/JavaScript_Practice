@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images Slider</title>
+    <style>
+        .container {
+            width: 50%;
+            border: 2px solid black;
+            margin: 5px auto;
+        }
+
+        .gallery {
+            width: 75%;
+            margin: 4px auto;
+            /* padding: 5px; */
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+        .gallery img {
+            width: 500px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .group {
+            width: 100%;
+            margin: 5px auto;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 2px 6px;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 4px 5px 3px black;
+            border: 2px solid black;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .one {
+            margin-right: 40px;
+
+        }
+
+        .two {
+            margin-left: 40px;
+        }
+
+        .btn:hover {
+            background-color: #6495ed;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="gallery">
+            <img src="../images/duck.jpg" alt="residential-images" class="show-image">
+        </div>
+        <div class="group">
+            <button class="btn one">Previous Image</button>
+            <button class="btn two">Next Image</button>
+        </div>
+    </div>
+    <script>
+        let imgArr = ['duck', 'mountains', 'residential','hills','mountain_2','swirls']
+        let prev = document.querySelector(".one")
+        let next = document.querySelector(".two")
+        let imgSrc = document.querySelector('.show-image')
+        console.log(imgSrc)
+        let count = 0
+        function nextImg() {
+            if (count < imgArr.length) {
+                imgSrc.src = `../images/${imgArr[count]}.jpg`
+                console.log(imgSrc)
+                count += 1
+                console.log(count)
+            } else if (count >= imgArr.length) {
+                count = 0
+                imgSrc.src = `../images/${imgArr[count]}.jpg`
+                console.log(imgSrc)
+                count += 1
+                console.log(count)
+            }
+        }
+        function prevImg() {
+            if (count > 0) {
+                count -= 1
+                imgSrc.src = `../images/${imgArr[count]}.jpg`
+                console.log(imgSrc)
+                console.log(count)
+            }else if(count==0){
+                count=imgArr.length-1
+                count -= 1
+                imgSrc.src = `../images/${imgArr[count]}.jpg`
+                console.log(imgSrc)
+            }
+            /* count=imgArr.length-1
+            // console.log(count)
+            if(count>=0){
+            imgSrc.src=`../images/${imgArr[count]}` */
+        }
+        // count=count-1
+        // console.log(count)
+
+        next.addEventListener('click', nextImg)
+        prev.addEventListener('click', prevImg)
+    </script>
+</body>
+
+</html>

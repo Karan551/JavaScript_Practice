@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback function</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&family=Merriweather:ital,wght@1,700&family=Roboto+Mono:wght@600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        /* To create a dark mode. */
+        body {
+            background-color: #333;
+            color: whitesmoke;
+            display: flex;
+            flex-flow: column wrap;
+            min-height: 100vh;
+            font-family: 'Balsamiq Sans', sans-serif;
+            font-size: 1.5rem;
+        }
+
+
+        .heading {
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+            font-family: 'Merriweather', serif;
+        }
+
+        .sub-heading {
+            font-size: 1.5rem;
+            text-decoration: underline;
+            font-weight: 700;
+            margin: 10px 5px;
+        }
+
+        .sub-heading h2 {
+            margin: 10px;
+
+        }
+
+        .sub-heading span {
+            background-color: darkgrey;
+            border-radius: 2px;
+            padding: 5px 10px;
+            margin: 5px;
+            margin-bottom: 10px;
+            color: #ffffff
+        }
+
+        .underline-content {
+            text-decoration: underline;
+        }
+
+        .content {
+            margin: 10px;
+            padding: 5px 10px;
+            font-size: 1.4rem;
+            /* color:blue; */
+
+            line-height: 1.7;
+
+        }
+
+        .syntax {
+            border: 3px solid #fff;
+            margin: 2px 5px;
+            padding: 5px 7px;
+            border-radius: 10px;
+            color: coral;
+
+        }
+
+        .d-flex {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: flex-start;
+            justify-content: center;
+
+        }
+
+        .flex-direction {
+            flex-flow: row wrap;
+        }
+
+        .gap {
+            gap: 8px;
+        }
+
+        .justify-content {
+            justify-content: center;
+
+        }
+
+        .syntax .main {
+            text-decoration: underline;
+            font-size: 25px;
+            color: #333;
+            font-weight: 800;
+        }
+
+        .keyword {
+            color: grey
+        }
+
+        .comment,
+        .highlight {
+            background-color: gainsboro;
+            color: #333
+        }
+
+        .info {
+            color: inherit
+        }
+
+        /* unorder list */
+        .unordered-list,
+        .ordered-list {
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .ordered-list .list-items .main {
+            text-decoration: underline;
+        }
+
+        a:any-link {
+            color: yellow;
+            text-transform: capitalize;
+
+        }
+
+        a:any-link:visited {
+            color: rgb(124, 228, 20)
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="heading underline-content">Chapter-9:-Callback Function, Promises</h1>
+    <dl>
+        <dt class="sub-heading">
+            <h2>Callback Function:-</h2>
+        </dt>
+        <dd class="content">A function that is used to another function as a parameter is a callback function.A callback
+            function is called after the main function has finished its execution.
+            <p class="info">More infomation about Callback Function <a href="https://javascript.info/callbacks"
+                    target="_blank" title="Callback information.">click here</a></p>
+        </dd>
+        <hr>
+        <!--          -----------Promise section-----------         -->
+        <dt class="sub-heading">
+            <h2>Promises:-</h2>
+        </dt>
+        <dd class="content">A Promise is a special JavaScript object that links the producing code and consuming code
+            together.
+            <p>The producing code takes whatever time it needs to produce the promised result available to all of the
+                subscribed code when it's ready.</p>
+            <div class="syntax d-flex">
+                <pre><span class="main">Syntax:-</span>
+            <span class="keyword">let</span> promise = <span class="keyword">new Promise</span>(<span class="keyword">function</span>(resolve,reject){
+               <span class="comment">// executor (the producing code)</span> 
+            })
+
+        </pre>
+            </div>
+            <p class="info">More infomation about Promises <a href="https://javascript.info/promise-basics"
+                    target="_blank" title="Promise information.">click here</a></p>
+            <p>More information about Promise Chaining <a href="https://javascript.info/promise-chaining"
+                    target="_blank" title="Promise Chaining">Click here</a></p>
+        </dd>
+        <hr>
+
+
+        <dd class="content">There are six methods in Promise class:
+            <ol class="ordered-list">
+                <li class="list-items">
+                    <h3 class="main">Promise.all(iterable):</h3>
+                    <p>Let's say we want many promises to execute in parallel and wait until all of them are ready.
+                        For instance, download several URLs in parallel and process the content once they are all done.
+                        That's what Promise.all is for.
+                    </p>
+                    <p>Promise.all() takes an iterable (usually, an array of promises) and returns a new promise.
+                        The new promise resolves when all listed promises are resolved, and the array of their results
+                        becomes its result.</p>
+                    <p><b>If any of the promises is rejected, the promise returned by Promise.all immediately rejects
+                            with that error.</b></p>
+                    <p><b>It returns a Promise.</b></p>
+
+                </li>
+                <li class="list-items">
+                    <h3 class="main">Promise.allSettled (iterable) :-</h3>
+                    <p><span class="highlight"> Promise.allSettled()</span> just waits for all promises to settle,
+                        regardless of the result.
+                    </p>
+                    <p>It also returns a new Promise.</p>
+                </li>
+                <li class="list-items">
+                    <h3 class="main">Promise.race(iterable) :-</h3>
+                    <p>Similar to <span class="highlight">Promise.all()</span>, but waits only for <span
+                            class="highlight">the first settled promise and gets its result (or error).</span></p>
+                </li>
+                <li class="list-items">
+                    <h3 class="main">Promise.any(iterable) :-</h3>
+                    <p>Similar to <span class="highlight">Promise.race()</span>, but waits only for the <span
+                            class="highlight">first fulfilled promise and gets its result.</span> If all of the given
+                        promises are rejected, then the returned promise is rejected with AggregateError - a special
+                        error object that stores all promise errors in its errors property.</p>
+                </li>
+                <li class="list-items">
+                    <h3 class="main">Promise.reslove(value) :-</h3>
+                </li>
+                <li class="list-items">
+                    <h3 class="main">Promise.reject(value) :-</h3>
+                </li>
+            </ol>
+            <p class="info">More Information about Promise API <a href="https://javascript.info/promise-api"
+                    target="_blank" title="Promise API">Click here</a></p>
+        </dd>
+        <hr>
+        <dt class="sub-heading">
+            <h2>Async Await:-</h2>
+        </dt>
+        <dd class="content">
+            <ul class="unordered-list">
+                <li class="list-items">
+                    <p>If we use <span class="highlight">“async”</span> keyword before a function means that function
+                        always
+                        returns a promise. Other
+                        values are wrapped in a resolved promise automatically.</p>
+                </li>
+                <li>
+                    <p>There is another keyword <span class="highlight">"await"</span> that works only inside <span
+                            class="highlight">async</span> functions.</p>
+                    <p class="syntax d-flex flex-direction justify-content gap"><span class="keyword">let </span> value
+                        = <span class="keyword">
+                            await</span> promise</p>
+                </li>
+                <li>The keyword <span class="highlight">await</span> makes JavaScript wait until that promise settles
+                    and return its result.</li>
+                <li>We may get this error if we forget to put <span class=" highlight">async</span> before a function
+                    <span class=" highlight">await</span> only works inside <span class=" highlight">async</span>
+                    function.
+                </li>
+                <li>
+                    <h3>Error handling :-</h3>
+                    <ul>
+                        <li>
+                            <p>If promise resolves normally then await promise returns result.But in the case of
+                                rejection
+                                it
+                                throws error.In real situations, the promise may take some time before it rejects. In
+                                that
+                                case
+                                there will be a delay before await throws an error.</p>
+                        </li>
+                        <li>
+                            <p>We can catch that error using <span class="highlight">try</span> and <span
+                                    class="highlight">
+                                    catch </span> the same way as a regulrar throw.In the case of an error, the control
+                                jumps to the catch block. </p>
+                        </li>
+                        <li>
+                            <p>If we don't have try..catch, then the promise generated by the call of the async function
+                                f()
+                                becomes rejected. We can append .catch to handle it.</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+
+            <p class="info">More Information about Async Await <a href="https://javascript.info/async-await"
+                    target="_blank" title="Promise API">Click here</a></p>
+        </dd>
+
+    </dl>
+    <!-- <script src="./callback.js"></script> -->
+    <script src="./promise.js"></script>
+</body>
+
+</html>

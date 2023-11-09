@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model Practice Set</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .header_nav{
+            display: flex;
+            justify-content: space-around;
+            flex-flow: row wrap;
+            align-items: center;
+            background-color: #333;
+            padding:10px 15px;
+            
+
+        }
+        li{
+            list-style-type:none;
+
+        }
+        a:any-link{
+            color:whitesmoke;
+            text-decoration: none;
+            font-size: 1.5rem;
+
+        }
+        li a:hover{
+            color: aquamarine;
+            cursor: pointer;
+        }
+        .box{
+            border:2px solid red;
+            margin:5px;
+            padding:15px 5px
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="header_nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">More</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="container">
+            <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, quibusdam?</div>
+            <div class="box">Porro, dolores! Facere esse deserunt quae itaque quidem amet voluptatem.</div>
+            <div class="box">Sequi quae, quos alias inventore ipsam culpa vero pariatur harum!</div>
+        </div>
+    </section>
+    <script src="./js/dom_practice_set.js"></script>
+</body>
+</html>
