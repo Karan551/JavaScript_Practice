@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Practice</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <h2>This is Form Practice Webpage.</h2>
+    <div class="container">
+        <section>
+            <form action="" id="user-form">
+                <div class="my-2">
+                    <label for="user-name" class="form-label">Enter Your Name:</label>
+                    <input type="text" class="form-control" id="user-name" placeholder="Enter your name:"
+                        name="user-name">
+                </div>
+                <div class="my-2">
+                    <label for="email" class="form-label">Enter Your Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email:">
+                </div>
+                <div class="mb-2">
+                    <label for="phone" class="form-label">Enter Your Email:</label>
+                    <input type="text" class="form-control" id="phone" maxlength="10" name="phone"
+                        placeholder="Enter your contact number:">
+                </div>
+
+                <button type="submit" class="btn btn-outline-primary btn-lg">Submit</button>
+            </form>
+        </section>
+        <hr>
+        <div class="fs-5 text-secondary">
+            <p>Load event is fired when the whole page has loaded , including all dependent resources like : stylesheets
+                , iframes , images , videos. This event is not cancelable and not bubble. </p>
+        </div>
+    </div>
+    <script src="./form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
