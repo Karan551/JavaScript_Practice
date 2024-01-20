@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Poppins:wght@500&display=swap');
+
+
+/* || CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* || General Styles */
+body {
+    font-size: 1.5rem;
+    font-family: 'Hedvig Letters Serif', serif;
+    /* font-family: 'Poppins', sans-serif; */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #475569;
+    background-image: radial-gradient(whitesmoke, #475569);
+    /* background-image: linear-gradient(whitesmoke,#475569); */
+
+}
+
+.devices {
+    border: 2px solid #000;
+    margin: 5px 10px;
+    padding: 8px 10px;
+    font-weight: 700;
+    font-size: 2rem;
+    color: blue;
+    display: none;
+}
+
+header,
+main,
+footer {
+    display: grid;
+    place-content: center;
+    /* place-items: center; */
+    grid-template-columns: 100%;
+    text-align: center;
+
+}
+
+header,
+footer {
+    position: sticky;
+    color: whitesmoke;
+    background-color: #1E293B;
+}
+
+header {
+    top: 0;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    bottom: 0;
+}
+
+nav {
+    background-color: #000;
+    color: #fff;
+    border-bottom: 2px solid rgba(255, 0, 0);
+}
+
+/*  ----------------CSS Media Queries---------------- */
+/* For small screen  like :- keypad phones */
+@media screen and (max-width:576px) {
+    main {
+        background-color: red;
+    }
+
+    #keypad {
+        display: block;
+    }
+
+}
+
+/* || Small Screen  like : latest keypad phones*/
+@media screen and (min-width:576px) {
+    main {
+        background-color: green;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #smartphone {
+        display: block;
+    }
+}
+
+/* || Medium Screen for like :- iPads Tablets */
+@media screen and (min-width:768px) {
+    main {
+        background-color: gold;
+    }
+
+
+}
+
+/* || Large Screen  */
+@media screen and (min-width: 992px) {
+    main {
+        background-color: firebrick;
+        background-image: radial-gradient(whitesmoke, firebrick)
+    }
+
+}
+
+/* || XL Screen  like :- Desktops*/
+@media screen and (min-width:1200px) {
+    main {
+        background-color: rebeccapurple;
+        background-image: radial-gradient(whitesmoke, rebeccapurple)
+    }
+
+}
+
+/* || MOBILE DEVICE LANDSCAPE  */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+    body {
+        background-color: dodgerblue;
+        background-image: radial-gradient(whitesmoke, dodgerblue)
+    }
+}
+
+/* || MOBILE DEVICE LANDSCAPE  */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+    body {
+        background-color: dodgerblue;
+        background-image: radial-gradient(whitesmoke, dodgerblue)
+    }
+}
