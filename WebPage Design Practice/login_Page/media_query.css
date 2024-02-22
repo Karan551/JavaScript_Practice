@@ -1,0 +1,29 @@
+/* This media query files is used to responsive for login page. */
+
+/* --------------------Media Queries-------------------- */
+
+/* For very small screens  */
+@media screen and (max-width:320px) {
+    .wrraper .remember-forgot{
+        flex-direction: column;
+    }
+}
+
+/* || Small screen */
+@media screen and (min-width:576px) {
+    wrraper h1 {
+        font-size: 1.8rem;
+
+    }
+
+    
+}
+
+/* || iPads or Tablet */
+@media screen and (min-width:768px) {}
+
+/* || Laptop or Large Screen */
+@media screen and (min-width:992px) {}
+
+/* || XL screen like: Desktop */
+@media screen and (min-width:1200px) {}

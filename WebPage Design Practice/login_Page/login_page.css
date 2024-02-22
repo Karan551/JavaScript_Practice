@@ -33,7 +33,7 @@ body {
 }
 
 .wrraper h1 {
-    font-size: 36px;
+    font-size: 1.5rem;
     text-align: center;
     
 }
@@ -66,12 +66,11 @@ body {
     color: #fff
 }
 
-.input-box i {
+.wrraper .input-box i {
     position: absolute;
     right: 20px;
-    /* top: 50%; */
-    top: 45%;
-    transform: translate(-50%);
+    top: 40%;
+    /* transform: translate(-50%); */
     transform: translateX(-50%);
     font-size: 20px;
 }

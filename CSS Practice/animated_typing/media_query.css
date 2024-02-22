@@ -1,0 +1,44 @@
+/* css media queries */
+@media screen and (max-width:576px) {
+    .wrapper{
+        flex-direction: column;
+        font-size: 1.2rem;
+    }
+    .wrapper .first-text,.sec-texts{
+        text-align: center;
+    }
+}  
+
+
+/* for latest smartphones */
+@media screen and (min-width:576px) {
+    .wrapper.first-text{
+        font-size: 3rem;
+    }
+    .wrapper .sec-texts li{
+        font-size: 60px;
+        text-align: center;
+    }
+
+}
+/* Medium screens like -iPads , Tablets */
+@media screen and (min-width:768px) {
+    .wrapper{
+        flex-direction:row;
+    }
+
+
+    .wrapper .first-text,.sec-texts{
+        text-align: center;
+        /* font-size: 70px; */
+    }
+    
+}
+/*Large Screen like - Laptops  */
+/* @media screen and (min-width:992px) {
+    
+} */
+/*Extra Large Screens like - Desktops  */
+/* @media screen and (min-width:1200px) {
+    
+} */
