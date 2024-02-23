@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #212121;
+    color: #fff;
+}
+
+/* Nav -bar */
+.nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px solid white;
+    padding: 10px 20px;
+    background-color: #d1d1d1eb;
+}
+
+ul li {
+    list-style-type: none;
+    border: 2px solid #333;
+    border-radius: 10px;
+    margin: 5px 10px;
+    padding: 10px 50px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+li:hover {
+    /* font-size: 1.7rem; */
+    transform: rotate(360deg);
+}
+
+li:first-child {
+    background-color: rgb(213, 213, 213);
+}
+
+a:any-link {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+
+
+}
+
+a:any-link:hover {
+    text-decoration: underline;
+}
+
+/* -------------To make a square------------- */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 15px 5px;
+}
+
+.square {
+    display: inline-block;
+    width: 10rem;
+    height: 10rem;
+    margin: 10px 15px;
+    padding: 10px 18px;
+    border: 2px solid #fff;
+    cursor: pointer;
+
+}
+
+div#grey {
+    background-color: gray;
+}
+
+div#white {
+    background-color: white;
+}
+
+div#blue {
+    background-color: blue;
+}
+
+div#yellow {
+    background-color: yellow;
+}
+
+
+/*  */
+/* For small screen  like :- keypad phones */
+@media screen and (max-width:576px) {
+    .nav-bar {
+        flex-flow: column wrap;
+    }
+
+    a:any-link {
+        font-size: 1rem;
+    }
+
+    .heading {
+        text-align: center;
+    }
+}
+
+/* 
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+    .nav-bar {
+        flex-flow: column wrap;
+        padding: 5px 10px;
+    }
+    ul li{
+        margin: 2px 5px;
+        padding: 4px 20px;
+    }
+
+} */
