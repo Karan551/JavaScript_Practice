@@ -13,7 +13,7 @@ body {
 .nav-bar {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     border: 2px solid white;
     padding: 10px 20px;
     background-color: #d1d1d1eb;
@@ -51,6 +51,13 @@ a:any-link {
 a:any-link:hover {
     text-decoration: underline;
 }
+
+/*  */
+.heading {
+    font-size: 2rem;
+    text-align: center;
+}
+
 
 /* -------------To make a square------------- */
 .container {
