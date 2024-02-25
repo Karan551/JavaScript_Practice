@@ -29,3 +29,34 @@ div.forEach(function (element) {
   });
 });
 ```
+##Project - 2
+```javascript
+const btn = document.querySelector("button");
+function calcBmi() {
+  // form.addEventListener("submit", function (e) {
+  //   // To stop the default behavior of form element.
+  //   e.preventDefault();
+  const height = parseInt(document.querySelector("#height").value);
+  const weight = parseInt(document.querySelector("#weight").value);
+  const result = document.querySelector(".results");
+  if (height === "" || height <= 0 || isNaN(height)) {
+    console.log(height)
+    result.innerHTML = "Please enter a valid height.";
+    // result.innerHTML = "";
+  } else if (weight <= 0 || isNaN(weight || weight === "")) {
+    console.log(weight)
+    result.innerHTML = "Please enter a valid weight.";
+  } else {
+    const bmi = (weight / height ** 2)*1000;
+
+    result.innerHTML = "<span>${bmi.toFixed(2)}</span>";
+    console.log("This is fixed value:", bmi.toFixed(4));
+    console.log("This is precise value:", bmi.toPrecision(4));
+  }
+}
+btn.addEventListener("click", function () {
+  calcBmi();
+});
+
+
+```
