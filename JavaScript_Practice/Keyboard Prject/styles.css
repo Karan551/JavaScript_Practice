@@ -1,0 +1,46 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: #212121;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.heading {
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+table,
+th,
+td {
+    font-size: 2rem;
+    border: 2px solid #fff;
+    padding: 1px 20px;
+    text-align: center;
+    color: aliceblue;
+}
+
+table {
+    width: 100%;
+    margin: 15px 5px;
+    border-collapse: collapse;
+}
