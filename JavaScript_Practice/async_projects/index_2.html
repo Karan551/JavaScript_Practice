@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Projects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 class="main-heading">Click the button and after 1 seconds Name Changing continuously</h1>
+    <div class="container">
+        <h2 class="heading">Ganesh</h2>
+        <div>
+            <button class="btn">Change Name</button>
+            <button class="stop-btn btn">Stop Change Name</button>
+        </div>
+    </div>
+
+    <script>
+        const heading = document.querySelector(".heading")
+        const btn = document.querySelector(".btn")
+        const stopBtn = document.querySelector(".stop-btn")
+        let stopMe;
+
+        function randomName() {
+            const nameArr = ["Kartik", "Ganesh", "Mahesh", "Nani", "Master",]
+            const randomNumber = Math.floor(Math.random() * nameArr.length)
+            return nameArr[randomNumber]
+        }
+
+        btn.addEventListener('click', () => {
+            // To stop change name continously
+            stopMe = setInterval(() => {
+                heading.innerHTML = randomName()
+            }, 1000);
+        })
+
+
+        // To stop change name
+        stopBtn.addEventListener('click', function () {
+            clearInterval(stopMe)
+            // To reduce memory blocks
+            stopMe = null
+
+        })
+
+    </script>
+</body>
+
+</html>

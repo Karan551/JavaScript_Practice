@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Projects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">Ganesh</h1>
+        <div>
+            <button class="btn">Change Name</button>
+            <button class="stop-btn btn">Stop Change Name</button>
+        </div>
+    </div>
+
+    <script>
+        const heading = document.querySelector(".heading")
+        const btn = document.querySelector(".btn")
+        const stopBtn = document.querySelector(".stop-btn")
+        let stopMe;
+
+        function randomName() {
+            const randomNumber = Math.floor(Math.random() * 3)
+            const nameArr = ["Kartik", "Ganesh", "Mahesh"]
+            console.log(nameArr[randomNumber])
+            return nameArr[randomNumber]
+        }
+
+        btn.addEventListener('click', () => {
+
+            stopMe = setTimeout(() => {
+                heading.innerHTML = randomName()
+            }, 2000)
+        })
+
+
+        // To stop change name
+        stopBtn.addEventListener('click', function () {
+            clearTimeout(stopMe)
+            // To reduce memory blocks
+            stopMe = null
+
+        })
+
+    </script>
+</body>
+
+</html>
