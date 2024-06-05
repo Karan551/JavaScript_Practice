@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #333;
+            color: #f5f5f5;
+        }
+
+        main {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         
+            flex-flow: column;
+        }
+        h1{
+            font-size: 4rem;
+            margin: 2.5rem 0.5rem;
+            padding: 1.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .btn-container{
+            display: flex;
+        }
+        .btn {
+            display: inline-block;
+            font-size: 2.5rem;
+            font-weight: 700;
+            border-radius: 15px;
+            background-color: #f5f5f5;
+            color: #212121;
+            outline: none;
+            padding: 1.5rem 2rem;
+            margin: 0.5rem 1rem;
+            transition: all ease-in-out 0.3s;
+         
+        }
+        .btn:active{
+            box-shadow: 2px 3px gray;
+        }
+        .btn:hover{
+            background-color: #2193FE;
+            color: #f5f5f5;
+            cursor: pointer;
+            transform: scale(1.1);    
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1 id="header">Welcome To Background Changer Project.</h1>
+        <div class="btn-conainer">
+            <button class="btn" id="start-btn" title="click here to start change background.">Start</button>
+        
+     
+            <button class="btn" id="stop-btn"
+            title="click here to stop change background."
+            >Stop</button>
+        </div>
+    </main>
+    <script src="./main.js"></script>
+</body>
+
+</html>
