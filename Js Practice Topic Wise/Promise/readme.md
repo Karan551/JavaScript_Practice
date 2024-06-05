@@ -1,6 +1,9 @@
 # Promises :-
 
 - A Promise is a special Javascript Object that links the **Producing Code** and **Consuming Code** together.
+
+#### How To Create A Promise :-
+
 - **Syntax ( How To Create A Promise ):-**
 
 ```javascript
@@ -19,6 +22,22 @@ const promise = new Promise(function (resolve, reject) {
 - ![img](./images/promise-resolve-reject.svg)
 
 [More Information Click Here](https://javascript.info/promise-basics)
+
+- **For example to create a promise :-**
+
+```javascript
+const promiseObject = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log("This is a Promise.");
+    const error = false;
+    if (!error) {
+      resolve({ username: "Ganesh", profession: "Programmer" });
+    } else {
+      reject("Something Went Wrong.");
+    }
+  }, 2000);
+});
+```
 
 ---
 
@@ -54,4 +73,117 @@ const promiseObject = new Promise(function (resolve, reject) {
 // This returns true if this is promise object if not promise object this returns false.
 let isPromise = promiseObject instanceof Promise;
 console.log("This is Promise object :", isPromise);
+```
+
+---
+
+## How To Consume A Promise :-
+
+### 1. **Consume a Promise Using Chaining Method :-**
+
+```javascript
+promiseObject
+  .then(function (response) {
+    return response.username;
+  })
+  .then(function (result) {
+    console.log("This is final result", result);
+  })
+  .catch(function (err) {
+    console.log("This is error", err);
+  })
+  .finally(() => {
+    console.log("Promise Four is finished.");
+  });
+```
+
+---
+### 2. Using Async & Await Keyword Method To Consume A Promise :-
+#### Async & Await Keyword :-
+
+- **await keyword :-** `await` keyword basically makes `JavaScript` wait until the `Promise Object` is `resolved or rejected`.
+- For example:-
+
+```javascript
+const response = await fetch("https://api.github.com/users/hiteshchoudhary");
+const json = response.json();
+console.log(json);
+
+// Above Code Gives error because await keyword should be afer async keyword
+```
+
+- `await` keyword is placed before the call to a function or variable that `returns a promise`. **It makes JavaScript wait for the Promise Object to settle before running the code in next line.**
+
+- **async keyword :-** To create an `asynchornous function` we need to add `async keyword` before our `function name`.
+
+- For Example:-
+
+```javascript
+async function myFunction() {
+  const response = await fetch("https://api.github.com/users/hiteshchoudhary");
+  const jsonData = await response.json(response);
+  console.log(jsonData);
+}
+// call function
+myFunction();
+```
+
+### How To Handle Errors With Async/Await :-
+
+- To Handle Errors with `async / await` we will have to use `try / catch` block with `async / await` :-
+- For example :-
+
+```javascript
+async function myFunction() {
+  try {
+    const response = await fetch("https://api.github.com/users/hiteshchoudhary");
+    const jsonData = await response.json(response);
+    console.log(jsonData);
+  } catch (error) {
+    console.log(error);
+  } finally {
+    console.log("Our task has finished finally.");
+  }
+}
+
+// call function
+myFunction();
+```
+
+- `finally()` block is `optional` this will execute if function **resolve or reject does not matter**.This block will always execute.
+
+### How To Use Async/Await in Arrow Functions :-
+
+```javascript
+const myFunction = async () => {
+  try {
+    const response = await fetch("https://api.github.com/users/hiteshchoudhary");
+    const jsonData = await response.json(response);
+    console.log(jsonData);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+//  call function
+myFunction();
+```
+
+- Above example of **Arrow Asynchronous Function**
+
+### How To Use Async/Await in IIFE:-
+
+- **IIFE (Immediately Invoked Function Expression)** is a technique that is used to execute a function immediately as soon as we define it.
+- **For Example :-**
+
+```javascript
+(async function myFunction() {
+  try {
+    const response = await fetch("https://api.github.com/users/hiteshchoudhary");
+    const jsonData = await response.json(response);
+    console.log(jsonData);
+  } catch (error) {
+    console.log(error);
+  }
+})();
 ```

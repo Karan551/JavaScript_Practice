@@ -136,7 +136,7 @@ async function githubData() {
   } catch (error) {
     console.log("Error", error);
   } finally {
-    console.log("Our gihub task has finished finally.");
+    console.log("Our github task has finished finally.");
   }
 }
 
